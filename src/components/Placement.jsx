@@ -281,7 +281,7 @@ const Placement = () => {
 
   return (
     <div className="flex justify-center items center">
-      <div className="w-[60%]">
+      <div className="md:w-[60%] w-[96%]">
         <h2 className="font-bold text-3xl">Upgrade. Evolve. Launch.</h2>
         <h2 className="font-bold text-[43px] mt-2 text-[#264087]">
           Hands-on & Placement-Driven Courses
