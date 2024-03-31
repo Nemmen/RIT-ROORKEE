@@ -64,10 +64,10 @@ const Hero = () => {
             </div>
           </div>
           <div className="md:flex  px-2  md:gap-5 mt-5">
-            <div className="px-5 py-3 text-center rounded-sm box-border bg-[#d63736] text-sm text-white font-semibold transition-all  ease-in duration-0  border border-[#d63736] hover:translate-y-[-10px]">
+            <div className="px-5 py-3 text-center rounded-sm box-border bg-[#d63736] text-sm text-white font-semibold transition duration-300   border border-[#d63736] hover:translate-y-[-10px]">
               Apply now
             </div>
-            <div className="px-5 justify-center py-3 mt-5  md:mt-0 rounded-sm text-sm box-border hover:bg-[#d63736] hover:text-white font-semibold bg-white transition-all  ease-in duration-0  border border-[#d63736] text-[#d63736] flex items-center">
+            <div className="px-5 justify-center py-3 mt-5  md:mt-0 rounded-sm text-sm box-border hover:bg-[#d63736] hover:text-white font-semibold bg-white transition duration-300  border border-[#d63736] text-[#d63736] flex items-center">
               Explore Courses{" "}
               <span className="ms-1">
                 <FaCaretDown className="" />
@@ -206,7 +206,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="md:flex">
-          <div className="px-5 py-3 rounded-sm justify-center text-sm box-border mt-8 hover:translate-y-[-10px] font-semibold bg-white transition-all  ease-in duration-0  border  text-[#d63736] hover flex items-center">
+          <div className="px-5 py-3 rounded-sm justify-center text-sm box-border mt-8 hover:translate-y-[-10px] font-semibold bg-white transition duration-300  border  text-[#d63736] hover flex items-center">
               Explore Courses <span className="ms-1"><FaCaretDown className=""/></span>
             </div>
           </div>

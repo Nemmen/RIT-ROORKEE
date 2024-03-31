@@ -241,7 +241,7 @@ const Navbar = () => {
                         key={index}
                         className="col-span-1 bg-yellow-400 relative rounded-md "
                       >
-                        <div className="bg-white relative hover:translate-y-[-10px] transition duration-300 hover:translate-x-[-10px] border border-black py-1 px-2   text-black font-light  rounded-md ">
+                        <div className="bg-white relative  h-full w-100 hover:translate-y-[-10px] transition duration-300 hover:translate-x-[-10px] border border-black py-1 px-2   text-black font-light  rounded-md ">
                           <p className="text-start font-bold ps-2 py-1">
                             {program.degree}
                           </p>
