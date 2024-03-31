@@ -141,19 +141,27 @@ const Navbar = () => {
       categories: "Computer Application",
     },
   ];
-  const [programs , setprograms] = useState(program1s)
+  const [programs, setprograms] = useState(program1s);
   const [toggle, setToggle] = useState(false);
-  const [selectedCategory,setselectedCategory] = useState('')
+  const [toggle1, setToggle1] = useState(null);
+  const [selectedCategory, setselectedCategory] = useState("");
 
   const clickHnadle = () => {
     setToggle(!toggle);
   };
+  const handle = (item) =>{
+
+      toggle1 === item ? setToggle1(null) : setToggle1(item)
+      toggle1 === item ? setselectedCategory(null) : setselectedCategory(item)
+
+
+
+  }
 
   const fitleer = (id) => {
-    const New = program1s.filter((item) => item.categories === id)
-    setprograms(New)
-    setselectedCategory(id)
-
+    const New = program1s.filter((item) => item.categories === id);
+    setprograms(New);
+    setselectedCategory(id);
   };
 
   const classs = toggle
@@ -211,8 +219,14 @@ const Navbar = () => {
                   return (
                     <div
                       key={index}
-                      onClick={() => { fitleer(cate) }}
-                      className={`text-start ps-2 py-2  font-bold mt-2 rounded-md ${cate === selectedCategory ? 'bg-[#264087] text-white' : 'text-black hover:bg-[#264087] bg-sky-100 hover:text-white'}`}
+                      onClick={() => {
+                        fitleer(cate);
+                      }}
+                      className={`text-start ps-2 py-2  font-bold mt-2 rounded-md ${
+                        cate === selectedCategory
+                          ? "bg-[#264087] text-white"
+                          : "text-black hover:bg-[#264087] bg-sky-100 hover:text-white"
+                      }`}
                     >
                       {cate}
                     </div>
@@ -233,7 +247,7 @@ const Navbar = () => {
                           </p>
                           <div className="flex gap-4">
                             <div className="flex gap-1 items-center">
-                            <LuClock8 />
+                              <LuClock8 />
                               <p className="text-start ps-2 py-2">
                                 {program.duration}
                               </p>
@@ -256,35 +270,51 @@ const Navbar = () => {
         </div>
       </div>
       <div>
-        <div className="md:hidden flex items-center">
-          <button className="mobile-me</div>nu-button" onClick={() => setToggle(!toggle)}>
+        <div className="md:hidden py-3 px-2 flex items-center">
+          <div>
+            {" "}
+            <img
+              src="https://ritroorkee.com/wp-content/uploads/2024/01/RIT-NAAC-LOGO-1.pdf-1.png"
+              className=" h-[40px]"
+            ></img>
+          </div>
+          <button className="ms-auto" onClick={clickHnadle}>
             {toggle ? <FaTimes /> : <FaBarsStaggered />}
           </button>
         </div>
         {toggle && (
-          <div className="mobile-menu">
-            <ul>
-              <li>
-                <a href="#" className="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">
-                  About us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block text-sm px-2 py-4 hover:bg-gree</a>n-500 transition duration-300">
-                  Services
-                </a>
-              </li>
-              <li>
-                <a href="#" className="block text-sm px-2 py-4 hover:bg-green-500 transition duratio</a>n-300">
-                  Contact us
-                </a>
-              </li>
-            </ul>
+          <div className="w-full  bg-white">
+            {categories.map((item, index) => {
+              return (
+                <div>
+                  <div className={`flex gap-2 items-center ${
+                        item === selectedCategory
+                          ? "bg-[#264087] text-white"
+                          : ""
+                      } font-semibold text-sm px-4 py-2`}
+                    key={index}
+                    onClick={() => {
+                      handle(item);
+                    }}
+                  >
+                    {item} <FaCaretDown />
+                  </div>
+                  <div>
+                    {(toggle1 === item) && (
+                      <div>
+                        {program1s
+                          .filter((value) => value.categories === item)
+                          .map((iitem, indee) => {
+                            return (
+                              <div className="ms-6 mt-2 text-sm" key={indee}>{iitem.degree}</div>
+                            );
+                          })}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
