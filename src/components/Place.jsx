@@ -1,5 +1,6 @@
 import React from "react";
 import ReactPlayer from "react-player";
+import PlacementCard from "./PlacementCard"; 
 
 const Place = () => {
   return (
@@ -47,9 +48,9 @@ const Place = () => {
           </div>
         </div>
       </div>
-      
-
-      cards....
+      <div>
+        <PlacementCard />
+      </div>
     </>
   );
 };

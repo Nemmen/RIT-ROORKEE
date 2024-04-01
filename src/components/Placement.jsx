@@ -309,14 +309,14 @@ const Placement = () => {
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
-          className="overflow-x-scroll transition duration-300  scrollbar-hide"
+          className="overflow-x-scroll scrollbar-hide"
         >
           <div className="flex mt-6 gap-[89px]   ">
             {programs.map((item, index) => {
               return (
                 <div className="w-100   h-100">
                 <div className=" w-[300px] h-[533px] bg-yellow-500 rounded-md">
-                <div className="border  rounded-md p-3 bg-white hover:translate-x-[-10px] hover:translate-y-[-10px] transtion duration-300 border-black w-[300px]  h-[533px]">
+                <div className="border transition duration-300 rounded-md p-3 bg-white hover:translate-x-[-10px] hover:translate-y-[-10px] ease-in-out border-black w-[300px]  h-[533px]">
                    <div className="flex">
                    <h3 className="bg-[#264087] rounded-md text-sm px-3 w-[maxcontent] text-white font-bold items-center py-2">{item.categories}</h3>
                    </div>
