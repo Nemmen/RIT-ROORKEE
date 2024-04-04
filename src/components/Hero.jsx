@@ -15,7 +15,7 @@ import { MdOutlineSportsCricket } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
-import Form from "./Form";
+import Form from "./fform";
 
 const Hero = () => {
   const scrollContainerRef = useRef(null);
