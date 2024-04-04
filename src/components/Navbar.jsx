@@ -170,6 +170,9 @@ const Navbar = () => {
 
   return (
     <>
+    <div className="w-full py-3 px-5 flex justify-end items-center bg-blue-600 text-white">
+      <h2 className="font-bold text-xl">For Admission: +91 9554795547</h2>
+    </div>
       <div className="w-full hidden relative md:block h-[maxcontent] py-4">
         <nav className="flex justify-center gap-[400px] items-center">
           <img
@@ -194,9 +197,11 @@ const Navbar = () => {
               </div>
             </li>
             <li className="">
+              <a href="https://www.vidhyaa.in/p/roorkee-institute-of-technology-roorkee-422?gad_source=1&gclid=EAIaIQobChMIkpSp6NenhQMV-h-DAx2RogKDEAAYASAAEgIEJfD_BwE" target="_blank">
               <button className="px-5 py-3 rounded-sm box-border bg-[#d63736] transition duration-300 text-sm text-white font-semibold hover:bg-white ease-in  border border-[#d63736] hover:text-[#d63736]">
                 Apply now
               </button>
+              </a>
             </li>
             <li className="">
               <button

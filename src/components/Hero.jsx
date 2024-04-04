@@ -15,6 +15,7 @@ import { MdOutlineSportsCricket } from "react-icons/md";
 import { FaInstagram } from "react-icons/fa6";
 import { FaAngleLeft } from "react-icons/fa6";
 import { FaAngleRight } from "react-icons/fa6";
+import Form from "./Form";
 
 const Hero = () => {
   const scrollContainerRef = useRef(null);
@@ -62,9 +63,17 @@ const Hero = () => {
     scrollContainerRef.current.scrollLeft = scrollLeft + 388;
     setScrollLeft(scrollContainerRef.current.scrollLeft);
   };
+  const [formm, setFormm] = useState(true)
 
   return (
     <>
+      {
+        formm && <div className="fixed top-[90px] z-[2] p-5 bg-[rgba(0,0,0,0.3)] left-[20%] w-[60%]">
+        <div className="w-full h-[maxcontent] flex justify-center items-center bg-[#fff] py-[20px] ">
+          <Form setFormm={setFormm}/>
+        </div>
+      </div>
+      }
       <div className="w-full p-3 h-[maxcontent] border-b-[20px] border-yellow-500 gradient-blue flex justify-center items-center py-[150px]  gap-[50px] flex-wrap">
         <div className="text-white md:w-[600px]">
           <h2 className="text-5xl  font-extrabold leading-[60px]">
