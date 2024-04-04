@@ -275,7 +275,7 @@ const Form = ({setFormm}) => {
       </form>
       <div>
         <p className="text-xl md:text-3xl mt-5 text-center">
-          Call @ 8851472322
+          Call @ 9554795547
         </p>
       </div>
     </div>
