@@ -197,7 +197,7 @@ const Navbar = () => {
               </div>
             </li>
             <li className="">
-              <a href="https://www.vidhyaa.in/p/roorkee-institute-of-technology-roorkee-422?gad_source=1&gclid=EAIaIQobChMIkpSp6NenhQMV-h-DAx2RogKDEAAYASAAEgIEJfD_BwE" target="_blank">
+              <a href="https://c4educare.com/" target="_blank">
               <button className="px-5 py-3 rounded-sm box-border bg-[#d63736] transition duration-300 text-sm text-white font-semibold hover:bg-white ease-in  border border-[#d63736] hover:text-[#d63736]">
                 Apply now
               </button>
